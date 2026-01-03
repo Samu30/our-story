@@ -6,7 +6,7 @@ const ending = document.getElementById("ending");
 
 
 /* 🎵 Background Music */
-const bgMusic = new Audio("ADHD.mp3"); // ADHD - TalkInToys
+const bgMusic = new Audio("adhd.mp3"); // ADHD - TalkInToys
 bgMusic.loop = true;
 bgMusic.volume = 0.4;
 
@@ -545,3 +545,4 @@ heartBtn.addEventListener("click", () => {
     }
   }
 });
+
