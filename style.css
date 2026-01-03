@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  background: linear-gradient(to bottom, #f6e6ff, #ffffff);
+  color: #333;
+}
+
+/* Intro */
+.intro {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.intro h1 {
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 3rem;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+button {
+  margin-top: 30px;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 30px;
+  background: #b57cff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Chat */
+.chat {
+  min-height: 100vh;
+  padding: 40px 20px 140px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Messages */
+.message {
+  max-width: 75%;
+  padding: 14px 18px;
+  margin: 12px 0;
+  border-radius: 20px;
+  line-height: 1.8;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.6s forwards;
+  position: relative;
+}
+
+/* Fofo (right) */
+.message.fofo {
+  background: #e9d7ff;
+  align-self: flex-end;
+  margin-left: auto;
+  border-bottom-right-radius: 5px;
+}
+
+/* Semo (left) */
+.message.semo {
+  background: #d6f0ff;
+  align-self: flex-start;
+  border-bottom-left-radius: 5px;
+}
+
+/* Time & Date */
+.message .datetime {
+  display: block;
+  font-size: 0.7rem;
+  margin-top: 6px;
+  opacity: 0.6;
+}
+
+/* Heart Button */
+.heart-container {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.heart-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 2rem;
+  background: #9b5cff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  animation: pulse 1.8s infinite;
+}
+
+.heart-text {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Ending */
+.ending {
+  padding: 80px 20px;
+  text-align: center;
+  font-family: 'Reem Kufi', sans-serif;
+}
+
+.ending h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.ending p {
+  font-size: 1.4rem;
+}
+
+/* Utilities */
+.hidden {
+  display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .message {
+    max-width: 90%;
+  }
+
+  .intro h1 {
+    font-size: 2.4rem;
+  }
+}
